@@ -1,13 +1,23 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <div className="bg-purple-600 py-10">
       <div className="container mx-auto flex justify-between items-center">
         <span className="text-3xl text-white font-bold tracking-tight">
-          DevHolidays.com
+          DevVoyages
         </span>
-        <span className="text-white font-bold tracking-tight flex gap-4">
-          <p className="cursor-pointer">Privacy Policy</p>
-          <p className="cursor-pointer">Terms of Service</p>
+        <span className=" text-white font-bold tracking-tight flex gap-4">
+          <p>
+            {" "}
+            Created by{" "}
+            <Link
+              to="https://github.com/HarshitAditya27"
+              className="cursor-pointer underline"
+            >
+              Harshit Aditya
+            </Link>
+          </p>
         </span>
       </div>
     </div>
