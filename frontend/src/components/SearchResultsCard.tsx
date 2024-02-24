@@ -25,7 +25,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
             <span className="ml-1 text-sm"> {hotel.type}</span>
           </div>
           <Link
-            to={`/details/${hotel._id}`}
+            to={`/detail/${hotel._id}`}
             className="text-2xl font-bold cursor-pointer"
           >
             {hotel.name}
@@ -42,13 +42,14 @@ const SearchResultsCard = ({ hotel }: Props) => {
               </span>
             ))}
             <span className="text-sm">
-              {" "}
               {hotel.facilities.length > 3 &&
                 `+${hotel.facilities.length - 3} more`}
             </span>
           </div>
           <div className="flex flex-col items-end gap-1">
-            <span className="font-bold">${hotel.pricePerNight} per night</span>
+            <span className="font-bold">
+              Rs {hotel.pricePerNight} per night
+            </span>
             <Link
               to={`/detail/${hotel._id}`}
               className="bg-purple-600 text-white h-full p-2 font-bold text-xl max-w-fit hover:bg-purple-500"

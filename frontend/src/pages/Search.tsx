@@ -1,6 +1,5 @@
 import { useQuery } from "react-query";
 import { useSearchContext } from "../contexts/SearchContext";
-import { searchHotels } from "../api-client";
 import * as apiClient from "../api-client";
 import { useState } from "react";
 import SearchResultsCard from "../components/SearchResultsCard";
@@ -25,7 +24,7 @@ const Search = () => {
   console.log(search);
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-5">
-      <div className="rounded-lg border vorder-slate-300 p-5 h-fit sticky top-10">
+      <div className="rounded-lg border border-slate-300 p-5 h-fit sticky top-10">
         <div className="space-y-5">
           <h3 className="text-lg font-semibold border-b border-slate-300 pb-5">
             Filter By:
@@ -36,7 +35,7 @@ const Search = () => {
         <div className="flex justify-between items-center">
           <span className="text-xl font-bold">
             {hotelData?.pagination.total} Hotels Found
-            {search.destination ? `in ${search.destination}` : ""}
+            {search.destination ? ` in ${search.destination}` : ""}
           </span>
         </div>
         {hotelData?.data.map((hotel) => (
@@ -45,8 +44,8 @@ const Search = () => {
         <div>
           <Pagination
             page={hotelData?.pagination.page || 1}
-            pages={hotelData?.pagination.pages}
-            onPageChangge={(page) => setPage(page)}
+            pages={hotelData?.pagination.pages || 1}
+            onPageChange={(page) => setPage(page)}
           />
         </div>
       </div>
