@@ -33,7 +33,7 @@ router.get("/search", async (req: Request, res: Response) => {
       .skip(skip)
       .limit(pageSize);
 
-    const total = await Hotel.countDocuments();
+    const total = await Hotel.countDocuments(query);
 
     const response: HotelSearchResponse = {
       data: hotels,
