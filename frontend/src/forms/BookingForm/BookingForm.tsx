@@ -1,8 +1,14 @@
 import { useForm } from "react-hook-form";
-import { UserType } from "../../../../backend/src/shared/types";
+import {
+  PaymentIntentResponse,
+  UserType,
+} from "../../../../backend/src/shared/types";
+import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
+import { StripeCardElement } from "@stripe/stripe-js";
 
 type Props = {
   currentUser: UserType;
+  paymentIntent: PaymentIntentResponse;
 };
 
 type BookingFormData = {
@@ -11,7 +17,24 @@ type BookingFormData = {
   email: string;
 };
 
-const BookingForm = ({ currentUser }: Props) => {
+const onSubmit = async (formData: BookingFormData) => {
+  if (!stripe || !elements) {
+    return;
+  }
+
+  const result = await stripe.confirmCardPayment(paymentIntent.clientSecret, {
+    payment_method: {
+      card: elements.getElement(CardElement) as StripeCardElement,
+    },
+  });
+
+  if (result.paymentIntent?.status === "succeeded") {
+  }
+};
+
+const BookingForm = ({ currentUser, paymentIntent }: Props) => {
+  const stripe = useStripe();
+  const elements = useElements();
   const { handleSubmit, register } = useForm<BookingFormData>({
     defaultValues: {
       firstName: currentUser.firstName,
@@ -53,6 +76,24 @@ const BookingForm = ({ currentUser }: Props) => {
             {...register("email")}
           />
         </label>
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-xl font-semibold">Your price summary</h2>
+        <div className="bg-purple-200 p-4 rounded-md">
+          <div className="font-semibold text-lg">
+            Total Cost: Rs{paymentIntent.totalCost.toFixed(2)}
+          </div>
+          <div className="text-xcs">Include taxes and charges</div>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <h3 className="text-xl font-semibold">Payment Details</h3>
+        <CardElement
+          id="payment-element"
+          className="border rounded-md p-2 text-sm"
+        />
       </div>
     </form>
   );
