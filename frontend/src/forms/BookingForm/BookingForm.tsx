@@ -29,22 +29,6 @@ export type BookingFormData = {
   totalCost: number;
 };
 
-const onSubmit = async (formData: BookingFormData) => {
-  if (!stripe || !elements) {
-    return;
-  }
-
-  const result = await stripe.confirmCardPayment(paymentIntent.clientSecret, {
-    payment_method: {
-      card: elements.getElement(CardElement) as StripeCardElement,
-    },
-  });
-
-  if (result.paymentIntent?.status === "succeeded") {
-    bookRoom({ ...formData, paymentIntentId: result.paymentIntent.id });
-  }
-};
-
 const BookingForm = ({ currentUser, paymentIntent }: Props) => {
   const stripe = useStripe();
   const elements = useElements();
@@ -53,7 +37,7 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
   const { showToast } = useAppContext();
 
   const { mutate: bookRoom, isLoading } = useMutation(
-    apiClient.createRoomBoooking,
+    apiClient.createRoomBooking,
     {
       onSuccess: () => {
         showToast({ message: "Booking Saved!", type: "SUCCESS" });
@@ -78,6 +62,23 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
       paymentIntentId: paymentIntent.paymentIntentId,
     },
   });
+
+  const onSubmit = async (formData: BookingFormData) => {
+    if (!stripe || !elements) {
+      return;
+    }
+
+    const result = await stripe.confirmCardPayment(paymentIntent.clientSecret, {
+      payment_method: {
+        card: elements.getElement(CardElement) as StripeCardElement,
+      },
+    });
+
+    if (result.paymentIntent?.status === "succeeded") {
+      bookRoom({ ...formData, paymentIntentId: result.paymentIntent.id });
+    }
+  };
+
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
