@@ -62,7 +62,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
       data.adultCount,
       data.childCount
     );
-    navigate(`/hotel/${hotelId}/booking`, { state: { from: location } });
+    navigate(`/hotel/${hotelId}/booking`);
   };
 
   return (
@@ -129,7 +129,7 @@ const GuestInfoForm = ({ hotelId, pricePerNight }: Props) => {
                 className="w-full p-1 focus:outline-none font-bold"
                 min={0}
                 max={20}
-                {...register("adultCount", {
+                {...register("childCount", {
                   valueAsNumber: true,
                 })}
               />

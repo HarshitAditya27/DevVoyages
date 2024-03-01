@@ -136,7 +136,7 @@ export type SearchParams = {
   types?: string[];
   stars?: string[];
   maxPrice?: string;
-  sortOptions?: string;
+  sortOption?: string;
 };
 
 export const searchHotels = async (
@@ -151,7 +151,7 @@ export const searchHotels = async (
   queryParams.append("page", searchParams.page || "");
 
   queryParams.append("maxPrice", searchParams.maxPrice || "");
-  queryParams.append("sortOptions", searchParams.sortOptions || "");
+  queryParams.append("sortOption", searchParams.sortOption || "");
 
   searchParams.facilities?.forEach((facility) => {
     queryParams.append("facilities", facility);
