@@ -41,7 +41,7 @@ const SignIn = () => {
     <form className="flex flex-col gap-5" onSubmit={onSubmit}>
       <h2 className="text-3xl font-bold">Sign In</h2>
 
-      <label className="text-gray-700 text-sm font-bold">
+      <label className="text-gray text-sm font-bold">
         Email Address
         <input
           type="email"
@@ -49,10 +49,10 @@ const SignIn = () => {
           {...register("email", { required: "This field is required" })}
         />
         {errors.email && (
-          <span className="text-red-500">{errors.email.message}</span>
+          <span className="text-red">{errors.email.message}</span>
         )}
       </label>
-      <label className="text-gray-700 text-sm font-bold">
+      <label className="text-gray text-sm font-bold">
         Password
         <input
           type="password"
@@ -66,7 +66,7 @@ const SignIn = () => {
           })}
         />
         {errors.password && (
-          <span className="text-red-500">{errors.password.message}</span>
+          <span className="text-red">{errors.password.message}</span>
         )}
       </label>
       <span className="flex items-center justify-between">
@@ -78,7 +78,7 @@ const SignIn = () => {
         </span>
         <button
           type="submit"
-          className="bg-purple-600 text-white p-2 font-bold hover:bg-purple-500 text-xl"
+          className="bg-custgreen text-white p-2 font-bold hover:bg-lightcustgreen text-xl"
         >
           Login
         </button>

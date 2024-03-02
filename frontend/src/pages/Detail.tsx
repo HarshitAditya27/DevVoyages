@@ -22,7 +22,7 @@ const Detail = () => {
       <div>
         <span className="flex">
           {Array.from({ length: hotel.starRating }).map(() => (
-            <AiFillStar className="fill-yellow-400" />
+            <AiFillStar className="fill-yellow" />
           ))}
         </span>
         <h1 className="text-3xl font-bold">{hotel.name}</h1>
@@ -40,9 +40,7 @@ const Detail = () => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
         {hotel.facilities.map((facility) => (
-          <div className="border border-slate-300 rounded-sm p-3">
-            {facility}
-          </div>
+          <div className="border border-slate rounded-sm p-3">{facility}</div>
         ))}
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr]">

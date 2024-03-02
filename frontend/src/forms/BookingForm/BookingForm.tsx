@@ -82,34 +82,34 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="grid grid-cols-1 gap-5 rounded-lg border border-slate-300 p-5"
+      className="grid grid-cols-1 gap-5 rounded-lg border border-slate p-5"
     >
       <span className="text-3xl font-bold">Confirm your details</span>
       <div className="grid grid-cols-2 gap-6 ">
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-gray text-sm font-bold flex-1">
           First Name
           <input
-            className="mt-1 border rounded w-full py-2 px-3 text-gray-700 bg-gray-200 font-normal"
+            className="mt-1 border border-lightgray rounded w-full py-2 px-3 text-gray bg-lightgray font-normal"
             type="text"
             readOnly
             disabled
             {...register("firstName")}
           />
         </label>
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-gray text-sm font-bold flex-1">
           Last Name
           <input
-            className="mt-1 border rounded w-full py-2 px-3 text-gray-700 bg-gray-200 font-normal"
+            className="mt-1 border border-lightgray rounded w-full py-2 px-3 text-gray bg-lightgray font-normal"
             type="text"
             readOnly
             disabled
             {...register("lastName")}
           />
         </label>
-        <label className="text-gray-700 text-sm font-bold flex-1">
+        <label className="text-gray text-sm font-bold flex-1">
           Email
           <input
-            className="mt-1 border rounded w-full py-2 px-3 text-gray-700 bg-gray-200 font-normal"
+            className="mt-1 border border-lightgray rounded w-full py-2 px-3 text-gray bg-lightgray font-normal"
             type="email"
             readOnly
             disabled
@@ -120,7 +120,7 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
 
       <div className="space-y-2">
         <h2 className="text-xl font-semibold">Your price summary</h2>
-        <div className="bg-purple-200 p-4 rounded-md">
+        <div className="bg-minimalgreen p-4 rounded-md">
           <div className="font-semibold text-lg">
             Total Cost: Rs {paymentIntent.totalCost.toFixed(2)}
           </div>
@@ -132,14 +132,14 @@ const BookingForm = ({ currentUser, paymentIntent }: Props) => {
         <h3 className="text-xl font-semibold">Payment Details</h3>
         <CardElement
           id="payment-element"
-          className="border rounded-md p-2 text-sm"
+          className="border border-lightgray rounded-md p-2 text-sm"
         />
       </div>
       <div className="flex justify-end">
         <button
           disabled={isLoading}
           type="submit"
-          className="bg-purple-600 text-white p-2 font-bold hover:bg-purple-500 text-md disabled:bg-gray-500"
+          className="bg-custgreen text-white p-2 font-bold hover:bg-lightcustgreen text-md disabled:bg-gray-500"
         >
           {isLoading ? "Saving..." : "Confirm Booking"}
         </button>

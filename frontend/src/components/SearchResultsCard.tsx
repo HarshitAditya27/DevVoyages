@@ -7,7 +7,7 @@ type Props = {
 };
 const SearchResultsCard = ({ hotel }: Props) => {
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-[2fr_3fr] border border-slate-300 rounded-lg p-8 gap-8">
+    <div className="grid grid-cols-1 xl:grid-cols-[2fr_3fr] border border-slate rounded-lg p-8 gap-8">
       <div className="w-full h-[300px]">
         <img
           src={hotel.imageUrls[0]}
@@ -19,7 +19,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
           <div className="flex items-center">
             <span className="flex">
               {Array.from({ length: hotel.starRating }).map(() => (
-                <AiFillStar className="fill-yellow-400" />
+                <AiFillStar className="fill-yellow" />
               ))}
             </span>
             <span className="ml-1 text-sm"> {hotel.type}</span>
@@ -37,7 +37,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
         <div className="grid grid-cols-2 items-end whitespace-nowrap">
           <div className="flex gap-1 items-center">
             {hotel.facilities.slice(0, 3).map((facility) => (
-              <span className="bg-slate-300 p-2 rounded-lg font-bold text-xs whitespace-nowrap">
+              <span className="bg-slate p-2 rounded-lg font-bold text-xs whitespace-nowrap">
                 {facility}
               </span>
             ))}
@@ -52,7 +52,7 @@ const SearchResultsCard = ({ hotel }: Props) => {
             </span>
             <Link
               to={`/detail/${hotel._id}`}
-              className="bg-purple-600 text-white h-full p-2 font-bold text-xl max-w-fit hover:bg-purple-500"
+              className="bg-custgreen text-white h-full p-2 font-bold text-xl max-w-fit hover:bg-lightcustgreen"
             >
               View More
             </Link>
