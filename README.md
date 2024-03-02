@@ -72,7 +72,7 @@ npm install
   **Step 8**: Run npm run dev. This will start the frontend part of the project on your local machine 🖥️. 
   
   ```
-npm install
+npm run dev
 
 ``` 
 Hurray 🥳, you successfully deployed the project in your local machine 🎉.  
