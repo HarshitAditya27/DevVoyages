@@ -16,7 +16,7 @@ export default {
       yellow: "#F8E559",
       black: "#000000",
       lightpurple: "#DFCCFB " /*B2A4FF*/,
-      green: "#4CBB17",
+      green: "#16a34a",
       red: "#ef4444",
       gray: "#374151",
       lightgray: "#e5e7eb",
