@@ -1,4 +1,5 @@
 # DevVoyages
+![Screenshot (481)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/8d653bea-6e01-4993-a591-52b2fcce5517)
 
 Deployed Link: https://devvoyages.onrender.com
 
@@ -9,13 +10,7 @@ Deployed Link: https://devvoyages.onrender.com
 
 ## Tech Stack used 👨‍💻
 
-- **HTML**
-- **TailwindCSS** 
-- **TypeScript** 
-- **React**
-- **MongoDB**
-- **Node.JS** 
-- **Express**
+<a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a><a href="https://tailwindcss.com/" target="_blank"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a>  <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a>  <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a>
 
 ## Features 🧰
 - User **authentication** 👤.
@@ -93,7 +88,17 @@ VITE_STRIPE_PUB_KEY
 ``` 
 
   ## Screenshots  
+![Screenshot (482)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/ae98c304-9802-44cc-bb8b-328f19241dc2)
+![Screenshot (493)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/38afb1b2-b87e-4e15-932c-5490042b3293)
+![Screenshot (484)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/93a327a8-4c15-47f1-9f53-d8d7e8792926)
+![Screenshot (485)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/c348ed4f-db4d-4690-bdbe-0acc3980f7f6)
+![Screenshot (486)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/665cea5a-5267-41cb-8358-82fc77cf5210)
+![Screenshot (487)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/9342b9c3-f872-49fb-844a-52ac1bf9b84a)
+![Screenshot (488)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/a5383032-f418-4e33-81d2-39b8a35228be)
+![Screenshot (493)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/55d0bda1-2293-4f22-87a4-d8cfeab1bc71)
+![Screenshot (492)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/eb7d74f6-aa04-468f-8b24-75de1c62eb19)
 
+![Screenshot (494)](https://github.com/HarshitAditya27/DevVoyages/assets/71604531/8c8e170f-789f-45cf-92f5-e6f6ab8487ab)
 
 
 
